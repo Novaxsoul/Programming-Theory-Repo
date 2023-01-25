@@ -9,7 +9,7 @@ public class MouseController : PlayerController
 
     protected override void SpecialAbility()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             Speed = baseSpeed * speedMult;
         } else

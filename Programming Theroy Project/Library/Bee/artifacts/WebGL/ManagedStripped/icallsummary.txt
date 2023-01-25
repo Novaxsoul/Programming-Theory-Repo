@@ -18,7 +18,6 @@ UnityEngine.Camera::get_clearFlags
 UnityEngine.Camera::get_targetTexture
 UnityEngine.CameraRaycastHelper::RaycastTry2D_Injected
 UnityEngine.CameraRaycastHelper::RaycastTry_Injected
-UnityEngine.Collider::get_bounds_Injected
 UnityEngine.Component::get_gameObject
 UnityEngine.Component::get_transform
 UnityEngine.ComputeShader::FindKernel
@@ -27,6 +26,7 @@ UnityEngine.Cubemap::Internal_CreateImpl
 UnityEngine.CubemapArray::Internal_CreateImpl
 UnityEngine.Cursor::set_lockState
 UnityEngine.Debug::ExtractStackTraceNoAlloc
+UnityEngine.Debug::DrawLine_Injected
 UnityEngine.DebugLogHandler::Internal_Log
 UnityEngine.DebugLogHandler::Internal_LogException
 UnityEngine.Display::RelativeMouseAtImpl
@@ -140,6 +140,7 @@ UnityEngine.Texture2DArray::Internal_CreateImpl
 UnityEngine.Texture3D::Internal_CreateImpl
 UnityEngine.Transform::get_childCount
 UnityEngine.Transform::TransformDirection_Injected
+UnityEngine.Transform::get_localScale_Injected
 UnityEngine.Transform::get_position_Injected
 UnityEngine.Transform::get_rotation_Injected
 UnityEngine.Transform::set_localRotation_Injected

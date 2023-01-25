@@ -50,25 +50,33 @@ extern void PlayerController_get_ActivePlayer_m56048927DD6509E3B61B02A3113D89038
 extern void PlayerController_set_ActivePlayer_m93A8D77E24F1A1B541DDEDF350F9756768576977 (void);
 // 0x00000013 System.Void PlayerController::Start()
 extern void PlayerController_Start_m1D83076E8B136A71051F2F02545EE04947D3A8CF (void);
-// 0x00000014 System.Void PlayerController::LateUpdate()
-extern void PlayerController_LateUpdate_mF92EA22693EF6A6EB8564733FFFDE30C901BCCAA (void);
-// 0x00000015 System.Void PlayerController::Move()
+// 0x00000014 System.Void PlayerController::Update()
+extern void PlayerController_Update_m1F4051EB5BCBCCE5EEE2E3E49B7E278C3B14EC33 (void);
+// 0x00000015 System.Void PlayerController::FixedUpdate()
+extern void PlayerController_FixedUpdate_m6D906D8B13844542B81CC49BA19760F747CEC8C0 (void);
+// 0x00000016 System.Void PlayerController::CanMove()
+extern void PlayerController_CanMove_m0C679F24F2BD159B6DA1BEA4CCEB6607DDF8EA3A (void);
+// 0x00000017 System.Void PlayerController::Move()
 extern void PlayerController_Move_m68BFC8B882D42955A212B23E7D1DDD56CC87DB09 (void);
-// 0x00000016 System.Void PlayerController::Jump()
+// 0x00000018 System.Void PlayerController::CanJump()
+extern void PlayerController_CanJump_m67C2B4B2A937A3834121661A9C998C886AA7B292 (void);
+// 0x00000019 System.Void PlayerController::Jump()
 extern void PlayerController_Jump_mA1AE5FDC39F88F78568A88C4CF6D08FDC6D7E908 (void);
-// 0x00000017 System.Void PlayerController::Rotate()
+// 0x0000001A System.Void PlayerController::Rotate()
 extern void PlayerController_Rotate_m308F9FE8E198966363C8FF1BA33F2AAB85B8303E (void);
-// 0x00000018 System.Boolean PlayerController::CheckGrounded()
+// 0x0000001B System.Boolean PlayerController::CheckGrounded()
 extern void PlayerController_CheckGrounded_mE977111C038A822DAEF246FB9A8C3F299279543E (void);
-// 0x00000019 System.Void PlayerController::SpecialAbility()
+// 0x0000001C System.Void PlayerController::SpecialAbility()
 extern void PlayerController_SpecialAbility_mB35F08C62F8B1DD73C47F5E9A7FF685597F823A9 (void);
-// 0x0000001A System.Void PlayerController::.ctor()
+// 0x0000001D System.Void PlayerController::.ctor()
 extern void PlayerController__ctor_mDDAB7C7D82E1A5B3E6C197B1AB9D653DFE554F33 (void);
-// 0x0000001B System.Void RabbitController::SpecialAbility()
+// 0x0000001E System.Void RabbitController::Jump()
+extern void RabbitController_Jump_m85D88213E9A0EC24C29CBFFB1850BEA40526E89C (void);
+// 0x0000001F System.Void RabbitController::SpecialAbility()
 extern void RabbitController_SpecialAbility_m0511AAD508CFF707D0FC5AF1C958F90EF16E9C02 (void);
-// 0x0000001C System.Void RabbitController::.ctor()
+// 0x00000020 System.Void RabbitController::.ctor()
 extern void RabbitController__ctor_m9E8936F36F75FBF1E344CDDAEC0396DCFEE26D3A (void);
-static Il2CppMethodPointer s_methodPointers[28] = 
+static Il2CppMethodPointer s_methodPointers[32] = 
 {
 	CameraController_LateUpdate_mC14DB0924E6F67288113AA92B3345A9B0ACEA27F,
 	CameraController_MoveCamera_mA2D1A592AABEDA675940110D79E2FD4A02E8083B,
@@ -89,52 +97,60 @@ static Il2CppMethodPointer s_methodPointers[28] =
 	PlayerController_get_ActivePlayer_m56048927DD6509E3B61B02A3113D8903889C78F2,
 	PlayerController_set_ActivePlayer_m93A8D77E24F1A1B541DDEDF350F9756768576977,
 	PlayerController_Start_m1D83076E8B136A71051F2F02545EE04947D3A8CF,
-	PlayerController_LateUpdate_mF92EA22693EF6A6EB8564733FFFDE30C901BCCAA,
+	PlayerController_Update_m1F4051EB5BCBCCE5EEE2E3E49B7E278C3B14EC33,
+	PlayerController_FixedUpdate_m6D906D8B13844542B81CC49BA19760F747CEC8C0,
+	PlayerController_CanMove_m0C679F24F2BD159B6DA1BEA4CCEB6607DDF8EA3A,
 	PlayerController_Move_m68BFC8B882D42955A212B23E7D1DDD56CC87DB09,
+	PlayerController_CanJump_m67C2B4B2A937A3834121661A9C998C886AA7B292,
 	PlayerController_Jump_mA1AE5FDC39F88F78568A88C4CF6D08FDC6D7E908,
 	PlayerController_Rotate_m308F9FE8E198966363C8FF1BA33F2AAB85B8303E,
 	PlayerController_CheckGrounded_mE977111C038A822DAEF246FB9A8C3F299279543E,
 	PlayerController_SpecialAbility_mB35F08C62F8B1DD73C47F5E9A7FF685597F823A9,
 	PlayerController__ctor_mDDAB7C7D82E1A5B3E6C197B1AB9D653DFE554F33,
+	RabbitController_Jump_m85D88213E9A0EC24C29CBFFB1850BEA40526E89C,
 	RabbitController_SpecialAbility_m0511AAD508CFF707D0FC5AF1C958F90EF16E9C02,
 	RabbitController__ctor_m9E8936F36F75FBF1E344CDDAEC0396DCFEE26D3A,
 };
-static const int32_t s_InvokerIndices[28] = 
+static const int32_t s_InvokerIndices[32] = 
 {
-	985,
-	985,
-	985,
-	985,
-	985,
-	985,
-	985,
-	985,
-	985,
-	985,
-	978,
+	984,
+	984,
+	984,
+	984,
+	984,
+	984,
+	984,
+	984,
+	984,
+	984,
+	977,
 	868,
-	978,
+	977,
 	868,
-	983,
+	982,
 	874,
-	937,
+	936,
 	831,
-	985,
-	985,
-	985,
-	985,
-	985,
-	937,
-	985,
-	985,
-	985,
-	985,
+	984,
+	984,
+	984,
+	984,
+	984,
+	984,
+	984,
+	984,
+	936,
+	984,
+	984,
+	984,
+	984,
+	984,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	28,
+	32,
 	s_methodPointers,
 	0,
 	NULL,

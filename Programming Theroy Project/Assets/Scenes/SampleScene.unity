@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 282231960}
   - component: {fileID: 282231959}
   - component: {fileID: 282231958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 317909084}
   - component: {fileID: 317909083}
   - component: {fileID: 317909087}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 928054375}
   - component: {fileID: 928054374}
   - component: {fileID: 928054373}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1289149480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TunelObstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1290199910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 1621909180}
   - component: {fileID: 1621909179}
   - component: {fileID: 1621909178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1692307486}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlatformObstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 1698020147}
   - component: {fileID: 1698020146}
   - component: {fileID: 1698020145}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: 1748536780}
   - component: {fileID: 1748536779}
   - component: {fileID: 1748536778}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -991,7 +991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1098766294665266683, guid: bdc009849abdf5a41a592c231f522418, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.28
+      value: 0.257
       objectReference: {fileID: 0}
     - target: {fileID: 1098766294665266683, guid: bdc009849abdf5a41a592c231f522418, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1024,6 +1024,10 @@ PrefabInstance:
     - target: {fileID: 1098766294665266683, guid: bdc009849abdf5a41a592c231f522418, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098766294665266687, guid: bdc009849abdf5a41a592c231f522418, type: 3}
+      propertyPath: jumpableGround.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc009849abdf5a41a592c231f522418, type: 3}
@@ -1081,6 +1085,10 @@ PrefabInstance:
     - target: {fileID: 4614353326099054740, guid: eac73988cce69c14cb30b106ac41c31a, type: 3}
       propertyPath: m_Name
       value: Rabbit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614353326099054748, guid: eac73988cce69c14cb30b106ac41c31a, type: 3}
+      propertyPath: jumpableGround.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eac73988cce69c14cb30b106ac41c31a, type: 3}

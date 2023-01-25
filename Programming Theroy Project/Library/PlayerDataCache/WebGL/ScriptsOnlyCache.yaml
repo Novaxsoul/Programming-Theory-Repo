@@ -393,7 +393,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: aae3008031c06f8454ca0f5e4764f862
+      Hash: 6262a179a33fa54fe834dd9bdb2af419
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -501,7 +501,7 @@ ScriptsOnlyBuild:
     className: MacroScriptableObject
   - hash:
       serializedVersion: 2
-      Hash: aae3008031c06f8454ca0f5e4764f862
+      Hash: 6262a179a33fa54fe834dd9bdb2af419
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MouseController
@@ -717,7 +717,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 382bcf6bca4667ecb836fe71c27f21a7
+      Hash: 05aaffb5ccb9608fb4d788f797783d7b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RabbitController

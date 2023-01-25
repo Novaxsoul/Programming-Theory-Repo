@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
         get { return speed; }
         set
         {
-            if(value < 0.0f)
+            if (value < 0.0f)
             {
                 Debug.LogError("Cant put negative speed");
             }
@@ -37,61 +37,93 @@ public class PlayerController : MonoBehaviour
         }
     }
     protected Rigidbody playerRb;
-    Collider playerCollider;
+    BoxCollider playerCollider;
     [SerializeField] Vector2 turn;
     public Vector2 Turn
     {
         get { return turn; }
         set { turn = value; }
     }
-    protected bool isGrounded = true;
+    [SerializeField] protected bool isGrounded = true;
     [SerializeField] bool activePlayer;
-    public bool ActivePlayer { 
-        get { return activePlayer; } 
+    public bool ActivePlayer {
+        get { return activePlayer; }
         set { activePlayer = value; }
     }
     float groundGap = 0.01f;
+    float sizeGap = 0.999f;
     [SerializeField] float rotationSpeed;
+    [SerializeField] LayerMask jumpableGround;
+    [SerializeField] protected bool shouldJump;
+    Vector3 moveVector;
 
     // Start is called before the first frame update
     void Start()
     {
         isGrounded = true;
         playerRb = GetComponent<Rigidbody>();
-        playerCollider = GetComponent<Collider>();
+        playerCollider = GetComponent<BoxCollider>();
     }
 
-    void LateUpdate()
+    private void Update()
+    {
+        if (activePlayer)
+        {
+            Rotate();
+            CanJump();
+            CanMove();
+            SpecialAbility();
+            CheckGrounded();
+        }
+
+    }
+
+    void FixedUpdate()
     {
         if (activePlayer)
         {
             Move();
-            Rotate();
             Jump();
-            SpecialAbility();
+
+            shouldJump = false;
+            moveVector = new Vector3(0, 0, 0);
+
         } else
         {
-            playerRb.velocity = new Vector3(0,playerRb.velocity.y,0);
+            playerRb.velocity = new Vector3(0, playerRb.velocity.y, 0);
         }
+    }
+
+    void CanMove()
+    {
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+        moveVector = transform.TransformDirection(new Vector3(horizontalInput, 0, verticalInput).normalized);
     }
 
     void Move()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
-        Vector3 moveVector = transform.TransformDirection(new Vector3(horizontalInput, 0, verticalInput).normalized);
         playerRb.velocity = new Vector3(moveVector.x * speed, playerRb.velocity.y, moveVector.z * speed);
     }
 
+    protected void CanJump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            shouldJump = true;
+        }
+
+
+    }
+
     virtual protected void Jump()
-    {     
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+    {
+        if (shouldJump && isGrounded)
         {
             playerRb.velocity = new Vector3(playerRb.velocity.x, 0, playerRb.velocity.z);
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
-        CheckGrounded();
     }
 
     void Rotate()
@@ -103,20 +135,29 @@ public class PlayerController : MonoBehaviour
 
     protected bool CheckGrounded()
     {
-        if(Physics.BoxCast(transform.position, new Vector3(playerCollider.bounds.extents.x, groundGap, playerCollider.bounds.extents.z), Vector3.down, transform.rotation, playerCollider.bounds.extents.y + groundGap))
+        RaycastHit hitInfo;
+        Bounds correctBounds = new Bounds(transform.position, transform.localScale);
+
+        if (Physics.BoxCast(transform.position, new Vector3(correctBounds.extents.x, groundGap, correctBounds.extents.z)*sizeGap, Vector3.down, out hitInfo, transform.rotation, correctBounds.extents.y))
         {
             isGrounded = true;
+            Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.red, 1.0f);
             return true;
+
         } else
         {
             isGrounded = false;
             return false;
         }
+
     }
+
 
     protected virtual void SpecialAbility()
     {
 
     }
+
+
 
 }
