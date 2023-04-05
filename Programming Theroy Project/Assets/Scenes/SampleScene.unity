@@ -1025,10 +1025,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1098766294665266687, guid: bdc009849abdf5a41a592c231f522418, type: 3}
-      propertyPath: jumpableGround.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc009849abdf5a41a592c231f522418, type: 3}
 --- !u!1001 &4614353324204910326
@@ -1085,10 +1081,6 @@ PrefabInstance:
     - target: {fileID: 4614353326099054740, guid: eac73988cce69c14cb30b106ac41c31a, type: 3}
       propertyPath: m_Name
       value: Rabbit
-      objectReference: {fileID: 0}
-    - target: {fileID: 4614353326099054748, guid: eac73988cce69c14cb30b106ac41c31a, type: 3}
-      propertyPath: jumpableGround.m_Bits
-      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eac73988cce69c14cb30b106ac41c31a, type: 3}
