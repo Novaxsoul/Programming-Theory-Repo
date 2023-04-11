@@ -347,6 +347,7 @@
 "Assets/Scripts/Game/PlayerController.cs"
 "Assets/Scripts/Game/RabbitController.cs"
 "Assets/Scripts/Helper/ButtonHandler.cs"
+"Assets/Scripts/Helper/ElevatorSensor.cs"
 "Assets/Scripts/Helper/MainManager.cs"
 -langversion:9.0
 

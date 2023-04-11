@@ -34,7 +34,7 @@ public class GoalController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bunny"))
+        if (other.CompareTag("Rabbit"))
         {
             isBunnyOnBase = true;
             rabbitOverlay.SetActive(false);
@@ -48,7 +48,7 @@ public class GoalController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Bunny"))
+        if (other.CompareTag("Rabbit"))
         {
             isBunnyOnBase = false;
             rabbitOverlay.SetActive(true);

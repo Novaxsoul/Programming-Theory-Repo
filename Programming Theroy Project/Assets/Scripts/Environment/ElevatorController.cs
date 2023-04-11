@@ -10,6 +10,14 @@ public class ElevatorController : EnvironmentController
     [SerializeField] float speed = 1f;
     float timer = 0f;
     float timeToWait = 3.0f;
+    Rigidbody elevatorRB;
+    ElevatorSensor eSensor;
+
+    private void Start()
+    {
+        elevatorRB = GetComponent<Rigidbody>();
+        eSensor = GameObject.Find("ElevatorSensor").GetComponent<ElevatorSensor>();
+    }
 
     private void FixedUpdate()
     {
@@ -31,7 +39,8 @@ public class ElevatorController : EnvironmentController
         {
             if (transform.position != maxFloor.position)
             {
-                transform.position = Vector3.MoveTowards(transform.position, maxFloor.position, speed * Time.deltaTime);
+                Vector3 moveT = Vector3.MoveTowards(transform.position, maxFloor.position, speed * Time.deltaTime);
+                elevatorRB.MovePosition(moveT);
             }
             else
             {
@@ -52,7 +61,8 @@ public class ElevatorController : EnvironmentController
         {
             if (transform.position != floor.position)
             {
-                transform.position = Vector3.MoveTowards(transform.position, floor.position, speed * Time.deltaTime);
+                Vector3 moveT = Vector3.MoveTowards(transform.position, floor.position, speed * Time.deltaTime);
+                elevatorRB.MovePosition(moveT);
             }
             else
             {
@@ -70,6 +80,15 @@ public class ElevatorController : EnvironmentController
         }
         
      
+    }
+
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if ((other.gameObject.CompareTag("Mouse") && eSensor.mouseIsAtBase) || (other.gameObject.CompareTag("Rabbit") && eSensor.rabbitIsAtBase))
+        {
+            movingUp = true;
+        }
     }
 
 }
