@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
+
+    enum ButtonTypeSelector { Enter, EnterAndExit }
+
     [SerializeField] GameObject environmentObject;
     EnvironmentController envController;
     [SerializeField] bool repeteable = false;
     bool active = true;
+    [SerializeField] ButtonTypeSelector buttonType;
 
     void Start()
     {
@@ -16,9 +20,9 @@ public class ButtonController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (active)
+        if (active && (buttonType == ButtonTypeSelector.Enter || buttonType == ButtonTypeSelector.EnterAndExit))
         {
-            if (!repeteable)
+            if (!repeteable && buttonType == ButtonTypeSelector.Enter)
             {
                 active = false;
             }
@@ -27,4 +31,18 @@ public class ButtonController : MonoBehaviour
         }
         
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (active && buttonType == ButtonTypeSelector.EnterAndExit)
+        {
+            if (!repeteable)
+            {
+                active = false;
+            }
+            envController.DoSomethingOnExit();
+
+        }
+    }
+
 }

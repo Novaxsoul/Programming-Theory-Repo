@@ -67,7 +67,7 @@ public class MainManager : MonoBehaviour
             string json = File.ReadAllText(filePath);
             SaveData data = JsonUtility.FromJson<SaveData>(json);
             int currentLevel = data.currentlevel;
-            if (currentLevel != 3)
+            if (currentLevel != 4)
             {
                 SceneManager.LoadScene(levelScenePrefix + " " + data.currentlevel);
             }

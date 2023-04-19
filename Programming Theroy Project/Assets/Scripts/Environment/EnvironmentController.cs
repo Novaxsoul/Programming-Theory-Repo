@@ -8,4 +8,9 @@ public class EnvironmentController : MonoBehaviour
     {
 
     }
+
+    virtual public void DoSomethingOnExit()
+    {
+
+    }
 }
