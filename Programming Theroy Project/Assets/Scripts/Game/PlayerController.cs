@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
     float sizeGap = 0.999f;
     [SerializeField] float rotationSpeed;
     [SerializeField] float maxYrotation;
+    [SerializeField] float minYrotation;
     protected bool shouldJump;
     Vector3 moveVector;
     bool offsetFlag = true;
@@ -140,7 +141,7 @@ public class PlayerController : MonoBehaviour
         turn.x += Input.GetAxis("Mouse X") * rotationSpeed;
         float yaxis = Input.GetAxis("Mouse Y") * rotationSpeed;
 
-        if(turn.y + yaxis >= 0f && turn.y + yaxis < maxYrotation)
+        if(turn.y + yaxis >= minYrotation && turn.y + yaxis < maxYrotation)
         {
             turn.y += yaxis;
             transform.localRotation = Quaternion.Euler(-turn.y, turn.x, 0);

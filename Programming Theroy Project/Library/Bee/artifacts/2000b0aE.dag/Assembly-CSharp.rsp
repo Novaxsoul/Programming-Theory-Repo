@@ -338,18 +338,18 @@
 "Assets/Scripts/Environment/Door/DoorController.cs"
 "Assets/Scripts/Environment/Door/HoldedDoorController.cs"
 "Assets/Scripts/Environment/Door/TimedDoorController.cs"
-"Assets/Scripts/Environment/ElevatorController.cs"
 "Assets/Scripts/Environment/EnvironmentController.cs"
 "Assets/Scripts/Environment/GoalController.cs"
-"Assets/Scripts/Environment/PlatformController.cs"
+"Assets/Scripts/Environment/Platforms/MovingPlatformController.cs"
+"Assets/Scripts/Environment/Platforms/PlatformController.cs"
 "Assets/Scripts/Game/CameraController.cs"
 "Assets/Scripts/Game/GameManager.cs"
 "Assets/Scripts/Game/MouseController.cs"
 "Assets/Scripts/Game/PlayerController.cs"
 "Assets/Scripts/Game/RabbitController.cs"
 "Assets/Scripts/Helper/ButtonHandler.cs"
-"Assets/Scripts/Helper/ElevatorSensor.cs"
 "Assets/Scripts/Helper/MainManager.cs"
+"Assets/Scripts/Helper/PlatformSensor.cs"
 -langversion:9.0
 
 /deterministic

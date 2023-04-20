@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElevatorSensor : MonoBehaviour
+public class PlatformSensor : MonoBehaviour
 {
     public bool mouseIsAtBase;
     public bool rabbitIsAtBase;
