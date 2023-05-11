@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class TimedDoorController : EnvironmentController
 {
     Renderer doorRender;
@@ -24,6 +25,7 @@ public class TimedDoorController : EnvironmentController
         ReactivateTimer();
     }
 
+    // POLYMORPHISM
     public override void DoSomething()
     {
         if (doorActivable)

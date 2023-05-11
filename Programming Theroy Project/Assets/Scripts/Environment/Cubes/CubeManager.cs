@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class CubeManager : EnvironmentController
 {
     [SerializeField] GameObject[] cubes;
@@ -53,6 +54,7 @@ public class CubeManager : EnvironmentController
         return true;
     }
 
+    // POLYMORPHISM
     public override void DoSomething()
     {
         foreach (GameObject cube in cubes)

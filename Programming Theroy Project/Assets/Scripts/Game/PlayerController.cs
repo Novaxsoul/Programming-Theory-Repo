@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 3.0f;
+    // ENCAPSULATION
     public float Speed
     {
         get { return speed; }
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     [SerializeField] float jumpForce = 5.0f;
+    // ENCAPSULATION
     public float JumpForce
     {
         get { return jumpForce; }
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
     protected Rigidbody playerRb;
     BoxCollider playerCollider;
     Vector2 turn;
+    // ENCAPSULATION
     public Vector2 Turn
     {
         get { return turn; }
@@ -46,6 +49,7 @@ public class PlayerController : MonoBehaviour
     }
     protected bool isGrounded = true;
     bool activePlayer;
+    // ENCAPSULATION
     public bool ActivePlayer {
         get { return activePlayer; }
         set { activePlayer = value; }
@@ -108,6 +112,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Function to move the player using the vector filled on CanMove function
+    // ABSTRACTION
     void Move()
     {
         playerRb.velocity = new Vector3(moveVector.x * speed, playerRb.velocity.y, moveVector.z * speed);
@@ -125,6 +130,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Function to make the player jump
+    // ABSTRACTION
     virtual protected void Jump()
     {
         if (shouldJump && isGrounded)
@@ -136,6 +142,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Function to rotate the player using mouse axis
+    // ABSTRACTION
     void Rotate()
     {
         turn.x += Input.GetAxis("Mouse X") * rotationSpeed;
@@ -160,6 +167,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Function to check if player is touching the ground
+    // ABSTRACTION
     protected bool CheckGrounded()
     {
         RaycastHit hitInfo;

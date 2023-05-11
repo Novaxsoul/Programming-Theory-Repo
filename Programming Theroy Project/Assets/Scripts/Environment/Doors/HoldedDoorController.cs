@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class HoldedDoorController : EnvironmentController
 {
     Renderer doorRender;
@@ -13,6 +14,7 @@ public class HoldedDoorController : EnvironmentController
         doorCollider = GetComponent<BoxCollider>();
     }
 
+    // POLYMORPHISM
     public override void DoSomething()
     {
         doorRender.enabled = false;

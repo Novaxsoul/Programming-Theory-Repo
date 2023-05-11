@@ -37,7 +37,7 @@ public class MainManager : MonoBehaviour
         LoadLevel();
     }
 
-
+    // ABSTRACTION
     public void saveNextLevel()
     {
         string sceneName = SceneManager.GetActiveScene().name;
@@ -50,6 +50,7 @@ public class MainManager : MonoBehaviour
  
     }
 
+    // ABSTRACTION
     public void saveNextLevel(int sceneLevel)
     {
         SaveData data = new SaveData();
@@ -59,6 +60,7 @@ public class MainManager : MonoBehaviour
 
     }
 
+    // ABSTRACTION
     public void LoadLevel()
     {
         string filePath = Application.persistentDataPath + "/savefile.json";

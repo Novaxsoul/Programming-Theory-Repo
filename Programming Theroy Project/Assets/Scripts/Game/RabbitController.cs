@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//INHERITANCE
 public class RabbitController : PlayerController
 {
     bool djumpReady;
     [SerializeField] float djumpForce = 3.0f;
 
     // Rabbit double jump ability
+    // POLYMORPHISM
     protected override void Jump()
     {
         if (shouldJump && isGrounded)
@@ -25,6 +27,7 @@ public class RabbitController : PlayerController
 
 
     // Rabbit double jump ability check
+    // POLYMORPHISM
     protected override void SpecialAbility()
     {
 

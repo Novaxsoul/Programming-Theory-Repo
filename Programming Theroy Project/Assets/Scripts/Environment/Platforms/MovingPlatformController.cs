@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class MovingPlatformController : EnvironmentController
 {
     [SerializeField] bool isActive = false;
@@ -33,6 +34,7 @@ public class MovingPlatformController : EnvironmentController
         }
     }
 
+    // POLYMORPHISM
     public override void DoSomething()
     {
         isActive = true;
